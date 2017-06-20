@@ -1,0 +1,22 @@
+.robots{
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.robotBox{
+  border: 1px solid black;
+  flex-grow: 1;
+  margin: 5px;
+  width: 200px;
+}
+
+.top_name{
+  color: blue;
+}
+
+
+
+.robotBottom{
+  border-radius: 90px;
+  border: 1px solid black
+}

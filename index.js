@@ -2,7 +2,26 @@ const express = require('express');
 const mustacheExpress = require('mustache-express');
 const path = require('path');
 const app = express();
-const userData = require('./data.js');
+const userData = require('./data.json');
+
+
+var MongoClient = require('mongodb').MongoClient , assert = require('assert');
+
+
+// Connection URL
+var url = 'mongodb://localhost:3001/Robots';
+
+// Use connect method to connect to the server
+MongoClient.connect(url, function(err, db) {
+  assert.equal(null, err);
+  console.log("Connected successfully to server");
+    findDocuments(db, function){
+      db.close();
+    });
+});
+
+var robots_collection;
+var findDocuments =
 
 
 app.engine('mustache', mustacheExpress());

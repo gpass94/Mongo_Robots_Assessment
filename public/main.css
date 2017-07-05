@@ -17,6 +17,23 @@
 
 
 .robotBottom{
-  border-radius: 90px;
+  border-radius: 360px;
   border: 1px solid black
+}
+
+
+.imageBottom{
+  border-radius: 360px;
+  border: 1px solid gray;
+  margin-right: 10px;
+}
+
+.bottomSection{
+  margin-left: 30%;
+  margin-top: 8%;
+
+}
+
+.bottomBox{
+  margin-left: 10%;
 }

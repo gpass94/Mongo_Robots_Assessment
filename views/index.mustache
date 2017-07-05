@@ -13,24 +13,40 @@
         <div class="robotBox">
           <img src= "{{avatar}}" alt="">
           <p class="top_name">{{name}}</p>
+          {{#job}}
           <p>{{job}}<span>{{company}}</span></p>
+          {{/job}}
+          {{^job}}
+          <p>Available for Hire</p>
+          {{/job}}
         </div>
         {{/users}}
       </div>
 
-        <div>
+        <div class="bottomSection">
           {{#users}}
           <div class="robotBottom">
             <img class="imageBottom" src="{{avatar}}" alt="">
           </div>
           <div>
             <h2>{{name}}</h2>
+            {{#job}}
             <p>{{address.city}}{{address.country}}{{job}}{{company}}</p>
+            {{/job}}
+            {{^job}}
+            <p>{{address.city}}{{address.country}}Available for Hire</p>
+            {{/job}}
             <p>{{email}}|{{phone}}</p>
           </div>
         </div>
-          <div class
 
-          {{/users}}
-  </body>
+
+<div class="bottomBox">
+         <p><strong>Education</strong> {{university}}</p>
+         <p><strong>Skills</strong> {{skills}}</p>
+       </div>
+       {{/users}}
+   </div>
+
+ </body>
 </html>
